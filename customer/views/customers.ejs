@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark shadowme">
+    <div class="container-fluid">
+      <div>
+        <img src="http://images.restapi.co.za/pvt/Noroff-64.png" alt="" class="navbar-brand" id="spritespin">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row py-3">
+      <h2 class="text-center mb-4">Customer List</h2>
+      <h4 class="text-center">Results for last name starting with: "<%= prefix %>"</h4>
+    </div>
+
+    <div class="panel shadowme">
+      <div class="panel-body">
+        <% if (customers && customers.length> 0) { %>
+          <table class="table table-dark table-striped mt-4">
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>Company Name</th>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Last Modified</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% customers.forEach(customer=> { %>
+                <tr>
+                  <td>
+                    <%= customer.CustomerID %>
+                  </td>
+                  <td>
+                    <%= customer.CompanyName || "N/A" %>
+                  </td>
+                  <td>
+                    <%= customer.Title %>
+                  </td>
+                  <td>
+                    <%= customer.FirstName %>
+                  </td>
+                  <td>
+                    <%= customer.MiddleName %>
+                  </td>
+                  <td>
+                    <%= customer.LastName %>
+                  </td>
+                  <td>
+                    <%= customer.EmailAddress %>
+                  </td>
+                  <td>
+                    <%= new Date(customer.ModifiedDate).toLocaleDateString("en-GB") %>
+                  </td>
+                  <td>
+                    <%= customer.Phone %>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+          <% } else { %>
+            <div class="alert alert-warning text-center mt-4" role="alert">
+              No customers found with last name starting with "<%= prefix %>"
+            </div>
+            <% } %>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center text-lg-start text-light">
+    <section>
+      <div class="text-center p-3 fixed-bottom footer-background">
+        © 2023 Customer Service
+      </div>
+    </section>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

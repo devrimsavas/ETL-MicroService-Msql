@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark shadowme">
+		<div class="container-fluid">
+			<div>
+				<img src="http://images.restapi.co.za/pvt/Noroff-64.png" alt="" class="navbar-brand" id="spritespin">
+			</div>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row py-3">
+			<div class="col">
+				<h3><i class="bi bi-table"></i> Query B</h3>
+			</div>
+		</div>
+
+		<div class="panel shadowme">
+			<div class="panel-body">
+				<div class="panel d-flex align-items-center mt-0 ">
+					<div class="panel-heading">
+						<h6 class="m-0 align-bottom panel-caption">Average Price Per Product Category</h6>
+						<a class="btn btn-success float-end" href="/">Home</a>
+					</div>
+				</div>
+				<div class="card-text">
+					<table class="table table-bordered table-dark table-striped table-hover">
+						<thead class="table-dark">
+							<tr>
+								<th>Category Name</th>
+								<th>Average Price</th>
+							</tr>
+						</thead>
+						<tbody class="table-group-divider">
+							<% if (query.length===0) { %>
+								<tr class="text-center">
+									<td colspan="2">Did you provide the query? No records</td>
+								</tr>
+								<% } else { %>
+									<% query.forEach(item=> { %>
+										<tr>
+											<td>
+												<%= item.CategoryName %>
+											</td>
+											<td>
+												<%= item.AveragePrice.toFixed(2) %>
+											</td>
+										</tr>
+										<% }) %>
+											<% } %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer start -->
+	<footer class="text-center text-lg-start text-light">
+		<section>
+			<div class="text-center p-3 fixed-bottom footer-background">
+				© 2023 Back-end Development
+			</div>
+		</section>
+	</footer>
+</body>
+
+</html>

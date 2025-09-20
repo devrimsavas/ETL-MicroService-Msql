@@ -1,0 +1,109 @@
+.panel-heading {
+	background-color: #474d53;
+	color: white;
+	width: 100%;
+	padding: 10px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+.panel-caption {
+	display: inline-block;
+	font-weight: 600;
+}
+
+.n-background-light {
+	background-color: #474d53;
+	color: white;
+}
+
+.mediumicon {
+	font-size: 16px;
+}
+.btn {
+	margin: 0px;
+	padding: 2px, 2px;
+}
+
+.panel {
+	/* border:2px solid rgb(79, 62, 62); */
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.panel-body {
+	background-color: #2d353c;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.card-text {
+	padding: 10px;
+	margin-top: 10px;
+}
+
+td {
+	background-color: #2d353c !important;
+}
+
+td,
+tr {
+	border: 1px solid #5c5f61;
+}
+
+table {
+	font-weight: 200;
+}
+
+body {
+	background-color: #161b1d;
+	color: white;
+}
+
+.footer-background {
+	background-color: #474d53;
+}
+
+.navbar {
+	background: #161b1d;
+}
+
+.shadowme {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.navbar-brand {
+	width: 32px;
+}
+.footer-brand {
+	width: 24px;
+}
+
+.dropdown-menu {
+	background-color: #45494a;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover {
+	background-color: #8b8d8e;
+	color: white;
+}
+
+.usermenu {
+	left: -80px !important;
+}
+
+.active {
+	color: rgb(249, 145, 145) !important;
+}
+
+.btn-row {
+	padding: 0px !important;
+}
+
+.options {
+	width: 5%;
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark shadowme">
+		<div class="container-fluid">
+			<!-- <a class="navbar-brand" href="#"></a> -->
+			<div>
+				<img src="http://images.restapi.co.za/pvt/Noroff-64.png" alt="" class="navbar-brand" id="spritespin">
+			</div>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</div>
+	</nav>
+	<div class="container-fluid">
+
+		<div class="row py-3">
+			<div class="col">
+				<h3><i class="bi bi-table"></i> Query F</h1>
+			</div>
+		</div>
+
+		<div class="panel shadowme">
+			<div class="panel-body">
+				<div class="panel d-flex align-items-center mt-0 ">
+					<div class="panel-heading">
+						<h6 class="m-0 align-bottom panel-caption">Power BI Query results to export</h6>
+						<button class="btn btn-warning float-end">Export Table</button>
+						<a class="btn btn-success float-end me-1" href="/">Home</a>
+
+					</div>
+				</div>
+				<div class="card-text">
+					<table class="table table-bordered table-dark table-striped table-hover" id="table">
+						<thead class="table-dark">
+							<tr>
+								<th>Title</th>
+								<th>First Name</th>
+								<th>Middle Name</th>
+								<th>Last Name</th>
+								<th>Company Name</th>
+								<th>City</th>
+								<th>Country Region</th>
+								<th>State Province</th>
+							</tr>
+						</thead>
+						<tbody class="table-group-divider">
+							<% if (query.length==0 ) {%>
+								<tr class="text-center">
+									<td colspan=8>
+										Did you provide the query? No records
+									</td>
+								</tr>
+								<%} else {%>
+									<% query.forEach(item=> {%>
+										<tr>
+											<td>
+												<%=item.Title%>
+											</td>
+											<td>
+												<%=item.FirstName%>
+											</td>
+											<td>
+												<%=item.MiddleName%>
+											</td>
+											<td>
+												<%=item.LastName%>
+											</td>
+											<td>
+												<%=item.CompanyName%>
+											</td>
+											<td>
+												<%=item.City%>
+											</td>
+											<td>
+												<%=item.CountryRegion%>
+											</td>
+											<td>
+												<%=item.StateProvince%>
+											</td>
+										</tr>
+										<%})%>
+											<%}%>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer start -->
+
+	<footer class="text-center text-lg-start text-light">
+
+		<section>
+			<div class="text-center p-3 fixed-bottom footer-background">
+				© 2023 Copyright:
+				<a class="text-reset fw-bold" href="https://noroff.no/"><img
+						src="http://images.restapi.co.za/pvt/Noroff-64.png" class="footer-brand"" alt=""></a>
+				Back-end Development
+			</div>
+	</footer>
+  
+
+ 
+
+	<script src=" /management/js/main.js"></script>
+
+
+
+</body>
+
+
+
+
+
+</body>
+
+</html>

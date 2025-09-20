@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateway Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark shadowme">
+        <div class="container-fluid">
+            <div>
+                <img src="http://images.restapi.co.za/pvt/Noroff-64.png" alt="" class="navbar-brand" id="spritespin">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container bg-dark mt-5 p-5 rounded">
+        <h2 class="text-center text-white mb-4">Welcome to the Gateway Service</h2>
+        <p class="text-center text-muted">Use the links below to access different microservices and manage products,
+            customers, and queries.</p>
+
+        <div class="row">
+            <!-- Product Service Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-dark shadowme">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Service</h5>
+                        <p class="card-text">View and manage product details.</p>
+                        <ul>
+                            <li>Access product data, including ID, name, model, and more.</li>
+                            <li>Example product link: <a href="/product/706">Product ID 706</a></li>
+                        </ul>
+                        <a href="/product" class="btn btn-primary">Go to Product Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Service Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-dark shadowme">
+                    <div class="card-body">
+                        <h5 class="card-title">Customer Service</h5>
+                        <p class="card-text">View and manage customer information.</p>
+                        <ul>
+                            <li>Fetch customer details by last name prefix.</li>
+                            <li>Example link: <a href="/customer/car">Last name starting with "car"</a></li>
+                        </ul>
+                        <a href="/customer" class="btn btn-primary">Go to Customer Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manager Service Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-dark shadowme">
+                    <div class="card-body">
+                        <h5 class="card-title">Management Service</h5>
+                        <p class="card-text">Access administrative queries and data analysis tools.</p>
+                        <ul>
+                            <li>Explore data and answer complex queries with pre-built SQL functions.</li>
+                            <li>Query examples:
+                                <ul>
+                                    <li><a href="/management/querya">Query A</a>: Categories without a
+                                        ParentProductCategoryId</li>
+                                    <li><a href="/management/queryb">Query B</a>: Average product prices by category
+                                    </li>
+                                    <li><a href="/management/queryc">Query C</a>: Average prices by parent category</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a href="/management" class="btn btn-primary">Go to Management Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-muted mt-4">
+            <div class="col text-center">
+                <h5>Instructions</h5>
+                <p>Use the links to navigate between services. For data export, access the queries under the Management
+                    Service and select "Export" on each page.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start text-light">
+        <section>
+            <div class="text-center p-3 fixed-bottom footer-background">
+                © 2023 Gateway Service
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

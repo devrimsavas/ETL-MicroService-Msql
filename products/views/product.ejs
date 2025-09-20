@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadowme">
+        <div class="container-fluid">
+            <div>
+                <img src="http://images.restapi.co.za/pvt/Noroff-64.png" alt="" class="navbar-brand" id="spritespin">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Product</h2>
+
+        <% if (product) { %>
+            <!-- Product details form -->
+            <form class="form-group">
+                <div class="mb-3">
+                    <label class="form-label">Product ID</label>
+                    <input type="text" class="form-control" value="<%= product.ProductID %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" class="form-control" value="<%= product.ProductName %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Product Model</label>
+                    <input type="text" class="form-control" value="<%= product.ProductModel %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Product Category</label>
+                    <input type="text" class="form-control" value="<%= product.ProductCategory %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Color</label>
+                    <input type="text" class="form-control" value="<%= product.Color %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Size</label>
+                    <input type="text" class="form-control" value="<%= product.Size %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Weight</label>
+                    <input type="text" class="form-control" value="<%= product.Weight %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">List Price</label>
+                    <input type="text" class="form-control" value="<%= product.ListPrice %>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Sell Start Date</label>
+                    <input type="text" class="form-control" value="<%= product.SellStartDate %>" readonly>
+                </div>
+            </form>
+            <% } else { %>
+                <!-- Product not found message -->
+                <div class="alert alert-dark text-center" role="alert">
+                    <h4>Product not found</h4>
+                </div>
+                <% } %>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
