@@ -1,0 +1,19 @@
+{
+  "name": "etl-datawarehouse",
+  "version": "1.0.0",
+  "description": "- **`/documents` folder** → contains detailed tutorial notes and screenshots.\r - **`/PowerBI_Graphs` folder** → contains Power BI `.pbix` files used for visualizations.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:gateway\" \"npm run start:customer\" \"npm run start:product\" \"npm run start:management\"",
+    "start:gateway": "cd gateway && npm start",
+    "start:customer": "cd customer && npm start",
+    "start:product": "cd products && npm start",
+    "start:management": "cd management && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
